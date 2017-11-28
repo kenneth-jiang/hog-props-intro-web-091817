@@ -5,19 +5,19 @@ import '../App.css'
 
 class App extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
+      ...Offspring, // spreads out the offspring array that contains individual babyhog elements
     }
   }
 
   render() {
     return (
       <div className="App">
-        
+        <MasterHog offspring={this.state.offspring} />
       </div>
     )
   }
-
 }
 
-export default App
+export default App;
